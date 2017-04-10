@@ -1,0 +1,11 @@
+language: cpp
+compiler:
+  - clang
+fast_fail: true
+script:
+- cd cdep
+- ./cdep fullfill .. ${TRAVIS_TAG:-0.0.0} cdep-manifest.yml
+- ./cdep
+- ./cmakeify -wf .cdep/examples/cmake  --group-id com.github.jomof --artifact-id mathfu-examples --target-version 0.0.0
+- git clone https://github.com/jomof/tools
+- tools/github_release_folder jomof mathfu .cdep/fullfill/output/layout
