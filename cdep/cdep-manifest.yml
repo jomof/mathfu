@@ -1,0 +1,15 @@
+coordinate:
+  groupId: com.github.jomof
+  artifactId: mathfu
+  version: ${version}
+dependencies:
+  - compile: com.github.jomof:vectorial:0.0.0-rev16
+archive:
+  file: ${source}/include/...
+example: |
+  #include <mathfu/glsl_mappings.h>
+  void test() {
+     const mathfu::vec4 v(1.0f, 2.0f, 3.0f, 4.0f);
+     mathfu::vec4 v2 = v + v;
+  }
+
