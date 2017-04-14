@@ -3,7 +3,7 @@ coordinate:
   artifactId: mathfu
   version: ${version}
 dependencies:
-  - compile: com.github.jomof:vectorial:0.0.0-rev16
+  - compile: com.github.jomof:vectorial:0.0.0-rev19
 archive:
   file: ${source}/include/...
 example: |
