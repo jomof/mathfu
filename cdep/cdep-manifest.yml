@@ -5,13 +5,13 @@ coordinate:
 license:
   name: Apache 2.0
 dependencies:
-  - compile: com.github.jomof:vectorial:0.0.0-rev19
-archive:
-  file: ${source}/include/...
+  - compile: com.github.jomof:vectorial:0.0.0-rev21
+interfaces:
+  headers:
+    file: ${source}/include/...
 example: |
   #include <mathfu/glsl_mappings.h>
   void test() {
      const mathfu::vec4 v(1.0f, 2.0f, 3.0f, 4.0f);
      mathfu::vec4 v2 = v + v;
   }
-
